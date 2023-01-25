@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="Imagens/logotemporario1.ico" type="image/x-icon" />
+    <!-- CSS bootstrap -->
+    <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="Bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Estilos/principal.css" rel="stylesheet" />
+    <!--css do icones telefones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contato</title>
+</head>
+<body id="contato">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <header>
+                    <a href="index.html"><img id="direito" src="Imagens/logotemporario.png" /></a>
+
+                    <h1>Nossa missão é empregar todos os meios jurídicos para a resolução do seu caso</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <!--menu do site-->
+            <div class="col-lg-12 text-center">
+                <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barrabasica">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="barrabasica">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="advocacia.html">Advocacia Nascimento</a></li>
+                            <li><a href="areas-atuacao.html">Áreas de Atuação</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="noticias.html">Noticias e Publicações</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="telefone" class="col-md-12">
+                <a href="https://api.whatsapp.com/send?phone=5541999457303" target="_blank"><i class="fa fa-whatsapp"> (41) 99945-7303</i></a>
+                <h3>Toque no numero para mandar mensagem direto no WhatsApp</h3>
+                <i class="fa fa-phone"><a href="tel:04130553317"> (41) 3618-1233</a></i>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Formulario da pagina-->
+            <main>
+                <div class="col-md-6">
+                    <form method="post" name="formuser" action="https://formspree.io/togukawa@gmail.com">
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" name="nome" class="form-control" placeholder="Escreva seu nome" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input class="form-control" name="email" placeholder="Escreva seu email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Telefone:</label>
+                            <input class="form-control" id="telefone" type="text" name="telefone" placeholder="(99)99999-9999" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Assunto:</label>
+                            <input class="form-control" name="assunto" placeholder="Assunto do contato" />
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea">Comentário</label>
+                            <textarea class="form-control" name="comentario" rows="3"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-secondary" value="enviar" onclick="return validar()" />
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.1721559472307!2d-49.26709318482966!3d-25.432507339220454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce46a111979b1%3A0x8f2c59031d75c855!2sPra%C3%A7a%20Senador%20Correia%20-%20Centro%2C%20Curitiba%20-%20PR%2C%2082590-300!5e0!3m2!1spt-BR!2sbr!4v1674657425155!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <footer id="myFooter">
+      <div class="footer-social">
+          <div class="container">
+              <ul>
+                  <li><a href="advocacia.html">Advocacia Nascimento</a></li>
+                  <li><a href="contato.html">Contato</a></li>
+                  <li><a href="areas-atuacao.html">Areas de atuação</a></li>
+                  <li><a href="noticias.html">Noticias e Publicações</a></li>
+              </ul>
+          </div>
+          <a href="https://www.instagram.com/togukawa/?hl=pt-br" target="_blank" class="social-icons"><i class="fa fa-instagram"></i></a>
+
+          <a href="https://twitter.com/WFnix" target="_blank" class="social-icons"><i class="fa fa-twitter"></i></a>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+        function validar(){
+          var nome = formuser.nome.value;
+          var email = formuser.email.value;
+          var assunto = formuser.assunto.value;
+
+
+          if(nome == ""){
+            alert('Preencha o campo nome.');
+            formuser.nome.focus();
+            return false;
+          }
+
+          if(email == "" || email.indexOf('@') == -1 ){
+            alert('Preencha o campo E-mail.');
+            formuser.email.focus();
+            return false;
+          }
+
+          if(assunto == "" || assunto.length <= 5){
+            alert('Preencha o campo assunto');
+            formuser.assunto.focus();
+            return false;
+          }
+        }
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        (window.jQuery) || document.write('<script type="text/javascript" src="Bootstrap/js/jquery.min.js"><\/script>');//]]>
+    </script>
+    <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+    </script>
+    <!-- fim scripts para JS -->
+</body>
+</html>
